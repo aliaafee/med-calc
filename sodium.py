@@ -141,7 +141,7 @@ def hyponatremia(serum_Na):
     vol_3_saline = delta_Na * tbw / 513.0
 
     print("Vol 3% saline is {} mL/24hours for slow correction".format(round(vol_3_saline*1000.0)))
-    print("Remember to monitor Monitor Na 4-6 hrly")
+    print("Remember to Monitor Na 4-6 hrly")
 
     
 
@@ -156,4 +156,4 @@ if serum_Na < 135.0:
     hyponatremia(serum_Na)
     exit()
     
- print("Looks good, do not think we need to anything")
+    print("Looks good, do not think we need to anything")
