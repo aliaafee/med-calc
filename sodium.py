@@ -3,8 +3,9 @@
 Serum Sodium Correction Protocol
 --------------------------------
 Not for medical use.
-Source: The Neuro ICU Book, Second Edition, 2018 McGraw-Hill, Lee Kiwon
 
+References:
+    1. Lee K. The NeuroICU Book, Second Edition. 2 edition. New York: McGraw-Hill Education / Medical; 2017. 1104 p. 
 """
 
 def get_est_plasma_osmolality(serum_Na):

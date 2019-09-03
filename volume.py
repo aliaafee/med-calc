@@ -1,12 +1,20 @@
 #!/usr/bin/python
-"Volume calculator for approx spherical volumes on ct and MRI"
-width = float(input("Width: "))
-length = float(input("Length: "))
-height_a = float(input("First Section: "))
-height_b = float(input("Last Section: "))
-height = abs(height_a - height_b)
+"""
+MRI/CT ICH Volume Calculator
+------------------------
+for approx spherical volumes on CT and MRI
 
-volume = (width * height * length)/2.0
+References:
+    1. Kothari RU, Brott T, Broderick JP, Barsan WG, Sauerbeck LR, Zuccarello M, et al. The ABCs of measuring intracerebral hemorrhage volumes. Stroke. 1996 Aug;27(8):1304–5. 
+"""
+
+A  = float(input("A: Max Diameter (cm): "))
+B = float(input("B: Diameter Perp A (cm): "))
+C1 = float(input("C1: First Section (cm): "))
+C2 = float(input("C2: Last Section (cm): "))
+C = abs(C1 - C2)
+
+volume = (A * B * C)/2.0
 
 print("Volume: {} mL".format(volume))
 
