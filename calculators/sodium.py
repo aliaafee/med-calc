@@ -20,8 +20,8 @@ def get_est_plasma_osmolality(serum_Na):
 
 
 def get_tbw():
-    sex = prompt_choice("Sex", ["M", "F"])
-    mass = prompt_float("Weight", "kg")#float(input("Weight (kg): "))
+    sex = prompt_choice("Sex", ["m", "f"])
+    mass = prompt_float("Weight", "kg")
 
     water_fraction = 0.5
     if sex.upper() == "M":
@@ -53,11 +53,10 @@ def hyponatremia(serum_Na):
     echo("Hypotonic Hypernatremia")
     echo("")
 
-    mes_urine_osmolality = prompt_float("Measured Urine Osmolality", "mOsm/kg")
+    mes_urine_osmolality = prompt_float("Measured Urine Osmolality", "mOsm/kg", 100)
 
     if mes_urine_osmolality < 100.0:
         echo("Consider Primary Polydipsia")
-        return
 
     echo("")
     echo("ECF Volume\n----------\n1) Increased\n2) Decreased\n3) Normal")
@@ -73,7 +72,7 @@ def hyponatremia(serum_Na):
     if ecf_vol == 3:
         echo("Consider Adrenal Insufficiency, Hypothyroidism, SIADH, Thiazide Diuretic, K Depletion")
         if mes_urine_osmolality > 100:
-            echo("Most probably SIADH as urins osmolality > 100 mOsm/L")
+            echo("Most probably SIADH as urine osmolality > 100 mOsm/L")
 
     echo("")
 

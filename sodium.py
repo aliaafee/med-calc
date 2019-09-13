@@ -151,10 +151,12 @@ serum_Na = float(input("Serum Na (mmol/L): "))
 
 if serum_Na > 145.0:
     hypernatremia(serum_Na)
-    exit()
 
 if serum_Na < 135.0:
     hyponatremia(serum_Na)
-    exit()
     
+if serum_Na >= 135.0 and serum_Na <= 145.0:
     print("Looks good, do not think we need to anything")
+
+result = input("Press <Enter> to quit.")
+
